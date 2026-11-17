@@ -1,0 +1,153 @@
+{
+  "product": "Ohuhu Honolulu concept packaging",
+  "selected_scheme_id": "C-ohuhu72-modular-palette-v1",
+  "selected_scheme": "C｜模块调色盘盒",
+  "revision": "静态展开图 v13：中间底盒两侧壁下翻；左右小纸盘两侧保持立起；上方挡板固定，右侧多余独立板删除，下方带印刷挡板与底盒连体。动图同步为 v13。",
+  "selected_delivery": "C方案详细说明.html",
+  "motion_asset": "C/C取笔动作-v13.gif",
+  "user_dimensions_mm": [
+    150,
+    15
+  ],
+  "capacity": {
+    "colours": 72,
+    "blender": 1
+  },
+  "delivered_mode": "Native Blender Cycles 3D render",
+  "imagegen": {
+    "attempted": true,
+    "model": "gpt-image-2",
+    "mode": "bundled CLI edit",
+    "status": "failed",
+    "reason": "404 model_not_found: unavailable for current group",
+    "switched_model": false
+  },
+  "concepts": {
+    "A": {
+      "model_sha256": "7242710dda667ca3c76f6fd30848bfc0c2be6bd5958bcae3d75c4ff886a2c349",
+      "closed_envelope_mm": [
+        218.0,
+        167.0,
+        170.5
+      ],
+      "open_envelope_mm": [
+        218.0,
+        334.5,
+        169.0
+      ],
+      "outputs": {
+        "comparison-open.png": {
+          "sha256": "2b3c0639f813728c80dd65b1a18c464751beec5084216d844ddccd58e7eede89",
+          "size": [
+            1536,
+            1024
+          ]
+        },
+        "comparison-closed.png": {
+          "sha256": "d1d80e102e78d728c5d7b7b50ffac16b2ab973ad1b5e825400c3727ba11ac5db",
+          "size": [
+            1536,
+            1024
+          ]
+        }
+      },
+      "imagegen_inputs": {
+        "structure": "output\\packaging\\ohuhu-72-20261113\\A\\model-open-refined.png",
+        "logo": "output\\packaging\\ohuhu-72-20261113\\references\\ohuhu-logo.png",
+        "art": "output\\packaging\\ohuhu-72-20261113\\references\\botanical.png",
+        "appearance": "output\\packaging\\ohuhu-72-20261113\\references\\official-honolulu72.jpg"
+      },
+      "prompt_file": "output\\imagegen\\ohuhu-72-20261113\\A-prompt.txt"
+    },
+    "B": {
+      "model_sha256": "fa86e8fa7c0a960de4f90b393d9ad350c073da0f5b0b510415ba732607d856c0",
+      "closed_envelope_mm": [
+        220.25,
+        332.0,
+        100.0
+      ],
+      "open_envelope_mm": [
+        439.0,
+        224.0,
+        100.0
+      ],
+      "outputs": {
+        "comparison-open.png": {
+          "sha256": "523748904582c02ae2ae77f1c101c44934af89af40125c5034feddd8f86f7323",
+          "size": [
+            1536,
+            1024
+          ]
+        },
+        "comparison-closed.png": {
+          "sha256": "d5d4e6b143ffb748e9c9cb906c6d0e9a32294dc07b04c24189f07442272e9180",
+          "size": [
+            1536,
+            1024
+          ]
+        }
+      },
+      "imagegen_inputs": {
+        "structure": "output\\packaging\\ohuhu-72-20261113\\B\\model-open-refined.png",
+        "logo": "output\\packaging\\ohuhu-72-20261113\\references\\ohuhu-logo.png",
+        "art": "output\\packaging\\ohuhu-72-20261113\\references\\botanical.png",
+        "appearance": "output\\packaging\\ohuhu-72-20261113\\references\\official-honolulu72.jpg"
+      },
+      "prompt_file": "output\\imagegen\\ohuhu-72-20261113\\B-prompt.txt"
+    },
+    "C": {
+      "model_sha256": "7bf1add3d8c0d77f969b74be0375668dc2aae518b08d337c50ba593bcdf9ddea",
+      "closed_envelope_mm": [
+        246.0,
+        331.5,
+        84.0
+      ],
+      "open_envelope_mm": [
+        710.0,
+        681.5,
+        84.0
+      ],
+      "outputs": {
+        "comparison-open.png": {
+          "sha256": "6e85172a7c54c0d277d415dbc842ae751c64d7f4bda3b7b98902cd57d4df47e1",
+          "size": [
+            1536,
+            1024
+          ]
+        },
+        "comparison-closed.png": {
+          "sha256": "14daa621e4af4fa0d8738a416cb6eb1f9096d67cc01c4b09f62da5201e097897",
+          "size": [
+            1536,
+            1024
+          ]
+        }
+      },
+      "imagegen_inputs": {
+        "structure": "output\\packaging\\ohuhu-72-20261113\\C\\model-open-refined.png",
+        "logo": "output\\packaging\\ohuhu-72-20261113\\references\\ohuhu-logo.png",
+        "art": "output\\packaging\\ohuhu-72-20261113\\references\\botanical.png",
+        "appearance": "output\\packaging\\ohuhu-72-20261113\\references\\official-honolulu72.jpg"
+      },
+      "prompt_file": "output\\imagegen\\ohuhu-72-20261113\\C-prompt.txt"
+    }
+  },
+  "references": {
+    "botanical.png": "9f35f467c2c0c0a80540b326433c618fd2da6ffa65c1541840ee566b944cb3d7",
+    "official-honolulu72.jpg": "483a4dd8fb0a21cf7625647bf32ce33ac10eaad7895ea371271ce30282271a06",
+    "ohuhu-logo.png": "85d085729d8b4d6c334383e8577833e8fb41a5f6b3d59f72f6804ccb8fab270e"
+  },
+  "gallery_check": "已核对 v13 C 方案页与尺寸页；第1部分改为展开/闭合结构展示图，第2部分只保留取笔动图，第4部分放入结构草图作为尺寸账本索引，第5部分补充材料、装配和白样验证；页面本地引用、横向布局和 50 帧动图均已复查。",
+  "structure_sketch": "C/结构草图_C-v13.png",
+  "current_revision_assets": {
+    "model": "C/C-master-v13-still.blend",
+    "open_render": "C/comparison-open-v13.png",
+    "detail_render": "C/mechanism-clearance-v13.png",
+    "motion_asset": "C/C取笔动作-v13.gif",
+    "storyboard": "C/动作顺序_C-v13.png",
+    "calculation_page": "C尺寸计算.html"
+  },
+  "action_storyboard": null,
+  "calculation_page": "C尺寸计算.html",
+  "page_layout_update": "C方案详细说明.html：01 结构组成使用直观展开/闭合渲染，02 只展示 C取笔动作-v13.gif，04 尺寸账本引用结构草图但保持简洁，05 补充材料建议、装配顺序和待验证项目。"
+}

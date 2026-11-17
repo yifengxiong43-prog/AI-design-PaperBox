@@ -1,0 +1,27 @@
+# Local and generated work files
+tmp/
+references/
+output/
+desktop/resources/
+tmp_*.pdf
+packaging_concepts_*.png
+packaging_concepts_*.svg
+*.blend1
+*.blend2
+*.log
+*.rsp
+desktop/bin/
+desktop/obj/
+desktop/__pycache__/
+desktop/**/*.pyc
+
+# Local secrets and editor state
+.env
+.env.*
+*.user
+*.suo
+.vs/
+
+# Generated GIF frame caches
+**/_gif_frames/
+**/_gif_frames_v*/

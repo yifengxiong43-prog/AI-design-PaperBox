@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>C｜Ohuhu 72色模块调色盘盒｜v13结构说明</title>
+<style>
+:root{font-family:"Segoe UI","Microsoft YaHei",sans-serif;color:#183f34;background:#f4f7f3;line-height:1.75}*{box-sizing:border-box}body{margin:0}header{background:#125843;color:#fff;padding:48px max(5vw,24px)}h1{margin:0 0 8px;font-size:clamp(30px,4vw,52px);font-weight:600}header p{max-width:960px;color:#d8eee1;margin:8px 0}.wrap{max-width:1280px;margin:auto;padding:28px 24px 70px}section{background:#fff;border:1px solid #d1e0d5;border-radius:14px;padding:24px;margin:22px 0;box-shadow:0 3px 14px #174b3510}h2{margin:0 0 12px;color:#126047;font-size:28px}h3{color:#20654f;margin:18px 0 6px;font-size:20px}.hero{width:100%;display:block;border-radius:10px;background:#e9eeea}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.grid img{width:100%;border-radius:8px;background:#edf1ed}.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.gallery figure{margin:0;min-width:0}.gallery img{display:block;max-width:100%;height:auto}.gallery figcaption{margin-top:7px;color:#5e7769;font-size:14px}.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.fact{padding:12px 14px;background:#f1f7f1;border-radius:9px}.fact b{display:block;color:#5e7769;font-size:13px;font-weight:500}.fact strong{font-size:19px;color:#174e3d}.steps{counter-reset:step}.step{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid #e3ebe3}.step:last-child{border-bottom:0}.num{width:42px;height:42px;background:#70b49a;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px}.note{border-left:4px solid #e5ad5d;background:#fff8e9;padding:12px 16px;color:#66533b}.ok{border-left:4px solid #5eae83;background:#eef8f0;padding:12px 16px}.formula{font-family:Consolas,monospace;background:#f5f7f5;padding:10px 14px;border-radius:7px;overflow:auto}.ledger-image{width:100%;height:auto;display:block;margin:12px 0;border-radius:10px;background:#edf1ed}.material-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.material-card{padding:14px 16px;background:#f5f8f4;border:1px solid #d8e5da;border-radius:10px}.material-card h3{margin:0 0 6px;font-size:18px}.material-card p{margin:0;font-size:15px}.links a{display:inline-block;margin:5px 10px 5px 0;padding:8px 14px;border:1px solid #a9c8b6;border-radius:8px;color:#176048;text-decoration:none;background:#f8fcf8}@media(max-width:760px){.grid,.gallery,.facts,.material-grid{grid-template-columns:1fr}.wrap{padding:18px 12px}section{padding:18px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>C｜模块调色盘盒 v13</h1>
+  <p>Ohuhu Honolulu 风格｜72 色＋1 支混色笔｜纸外套＋纸基内托｜C-ohuhu72-modular-palette-v1</p>
+  <p>本版只展示已选 C 方案。中间纸盘留在底盒内，左右纸盘移出；只有中间底盒两侧壁下翻供纸盘抽出；左右小纸盘两侧保持立起并从上方取笔；上方挡板保持固定；右侧多余独立板删除；下方带印刷挡板与底盒连体。</p>
+</header>
+<div class="wrap">
+  <section>
+    <img class="hero" src="C/comparison-open-v13.png" alt="C方案三盘铺展模型渲染">
+    <div class="facts"><div class="fact"><b>容量</b><strong>72 色 + 1 支</strong></div><div class="fact"><b>单支尺寸</b><strong>150 mm × Ø15 mm</strong></div><div class="fact"><b>纸盘结构</b><strong>3 盘 × 24 支</strong></div><div class="fact"><b>闭合包络</b><strong>246 × 331.5 × 84 mm</strong></div></div>
+  </section>
+  <section>
+    <h2>1. 结构怎么组成</h2>
+    <div class="gallery"><figure><img src="C/comparison-open-v13.png" alt="C方案展开状态：外套、底盒和三只纸盘的相对位置"><figcaption>展开结构：外套、可抽出底盒和三只纸盘的相对位置。</figcaption></figure><figure><img src="C/comparison-closed-v6.png" alt="C方案闭合状态：外套包住底盒并由纸插舌锁住"><figcaption>闭合结构：外套包住底盒，前沿纸插舌负责锁住收纳状态。</figcaption></figure></div>
+    <h3>纸外套</h3><p>白色印刷纸面与绿色纸边组成抽拉外套。外套包住底盒，限制三只纸盘在携带时散开。</p>
+    <h3>可抽出底盒</h3><p>底盒承托中间纸盘，侧仓保留 1 支 Colorless Blender。底盒前沿的印刷挡板与底板连体，两个纸插舌只负责闭合，不在展开取笔时单独脱离。</p>
+    <h3>三只纸盘</h3><p>每盘为两排，每排 12 支，共 24 支。中间底盒两侧壁沿底部铰接并下翻，给左右纸盘抽出让路。左右小纸盘的两侧长边保持立起，不参与展开。上方挡板固定不下翻；右侧多余独立板不再设置；下方带印刷挡板继续与底盒连接。</p>
+  </section>
+  <section>
+    <h2>2. 展开状态与取笔路径</h2>
+    <img class="hero" src="C/C取笔动作-v13.gif" alt="C v13 取笔与收回动作动图">
+    <p>按动图查看完整路径：解除闭合 → 先抽出中间底盒 → 中间底盒两侧壁下翻 → 左右小纸盘移出 → 小纸盘两侧保持立起并从上方取笔 → 按相反顺序收回。上方挡板保持固定，下方带印刷挡板始终连体。</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><b>中间纸盘留在底盒内</b><br>中间纸盘作为工作区，不从底盒单独跑出。</div></div>
+      <div class="step"><div class="num">2</div><div><b>左右侧壁下翻</b><br>中间底盒两侧壁沿底部铰链向外放平，给左右小纸盘抽出让路；小纸盘两侧保持立起。</div></div>
+      <div class="step"><div class="num">3</div><div><b>左右纸盘移到两侧</b><br>左右纸盘沿各自方向移出；上方挡板保持固定，不需要放下。</div></div>
+      <div class="step"><div class="num">4</div><div><b>下方挡板保持连体</b><br>带印刷的下挡板与底盒前沿连接，不单独脱离或漂浮，只负责防止笔向前滚落。</div></div>
+      <div class="step"><div class="num">5</div><div><b>从侧面取笔</b><br>手从已放平的侧壁位置进入，托住笔身中段取出单支或整排。</div></div>
+    </div>
+    <div class="ok">本版静态图判定标准：右侧不出现多余独立板；上方挡板保持固定；下方带印刷挡板与底盒连体；中间底盒两侧壁放平后才能抽出左右纸盘；小纸盘两侧保持立起。</div>
+  </section>
+  <section>
+    <h2>3. 如何放回并合上</h2>
+    <ol><li>把左右纸盘的笔沿原方向放回槽位，确认没有笔横跨中隔或压住纸拉带。</li><li>把确认左右小纸盘两侧始终保持立起，确认侧挡卡入叠放路径；中间纸盘保持在底盒内。</li><li>把左右纸盘沿导向收回底盒两侧，再确认三盘回到叠放位置。</li><li>确认上方挡板仍与底盒连体、下方带印刷挡板没有脱离。</li><li>把底盒沿外套导向水平推回，推到前沿与外套齐平。</li><li>将两个纸插舌压入外套前边，确认插舌完全越过纸边后再携带。</li></ol>
+    <div class="note">当前静态图表达 v13 的展开关系；侧壁纸铰链、纸盘导向、固定下挡板和闭合插舌仍需白样确认折弯寿命、间隙和保持力。</div>
+  </section>
+  <section>
+    <h2>4. 尺寸账本</h2>
+    <img class="ledger-image" src="C/结构草图_C-v13.png" alt="C v13 结构计算草图与尺寸账本">
+    <p class="note">这里保留结构计算草图作为尺寸来源索引；结构组成和取笔动作以第 1、2 部分为准，本部分只看尺寸之间的关系。</p>
+    <p class="formula">12 × 15 + 11 × 2 + 4 = 206 mm（单排纸托内净宽）</p><p class="formula">206 + 2 × 2 = 210 mm（纸托外宽）</p><p class="formula">150 + 2 × 1 + 2 × 2 = 156 mm（单排深度，含取放余量与纸壁）</p>
+    <div class="facts"><div class="fact"><b>纸托内净宽</b><strong>206 mm</strong></div><div class="fact"><b>纸托外宽</b><strong>210 mm</strong></div><div class="fact"><b>单排深度</b><strong>156 mm</strong></div><div class="fact"><b>展开占地</b><strong>约 710 × 681.5 mm</strong></div></div>
+  </section>
+  <section>
+    <h2>5. 材料、装配与待验证</h2>
+    <div class="material-grid"><div class="material-card"><h3>材料建议</h3><p>外套优先灰板裱印刷纸；底盒和纸盘可用白卡/FBB 或折叠纸板。侧壁铰链处应保留连续纸纤维，避免开槽切断主受力带。</p></div><div class="material-card"><h3>装配顺序</h3><p>外套成型 → 底盒与连体挡板成型 → 中间侧壁纸铰链压折 → 装入纸盘和侧仓 → 粘贴纸拉带、低挡边与导向件 → 插舌闭锁 → 装笔并做抽拉检查。</p></div><div class="material-card"><h3>待验证项目</h3><p>需要白样确认板厚回弹、侧壁下翻 90° 的寿命、纸盘抽出间隙、挡板连接强度、插舌止退、倒置运输保持力和反复抽拉疲劳。</p></div></div>
+    <p>当前已通过同一模型检查 73 支数量、150 mm × Ø15 mm 尺寸、水平笔轴和 v13 静态展开关系；材料克重、裱合强度和量产公差仍需根据白样实测值回算。</p>
+  </section>
+  <section class="links"><h2>文件</h2><a href="C/C-master-v13-still.blend">C-master-v13 静态模型</a><a href="C/comparison-open-v13.png">展开渲染</a><a href="C/C取笔动作-v13.gif">v13 取笔动图</a><a href="C/动作顺序_C-v13.png">动作顺序图</a><a href="C/comparison-closed-v6.png">闭合渲染</a><a href="C/结构草图_C-v13.png">结构草图</a><a href="C尺寸计算.html">单独尺寸计算页</a><a href="C/model-record.json">模型记录</a></section>
+</div>
+</body>
+</html>

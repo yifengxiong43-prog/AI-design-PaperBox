@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>C｜尺寸计算与结构对应 v13</title>
+<style>
+:root{font-family:"Segoe UI","Microsoft YaHei",sans-serif;color:#183f34;background:#f4f7f3;line-height:1.75}*{box-sizing:border-box}body{margin:0}header{background:#125843;color:#fff;padding:42px max(5vw,24px)}h1{margin:0 0 8px;font-size:clamp(28px,4vw,48px);font-weight:600}header p{max-width:1000px;color:#d8eee1;margin:8px 0}.wrap{max-width:1280px;margin:auto;padding:28px 24px 70px}section{background:#fff;border:1px solid #d1e0d5;border-radius:14px;padding:24px;margin:22px 0;box-shadow:0 3px 14px #174b3510}h2{margin:0 0 12px;color:#126047;font-size:28px}h3{color:#20654f;margin:18px 0 6px;font-size:20px}.hero{width:100%;display:block;border-radius:10px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.grid img{width:100%;border-radius:8px;background:#edf1ed}.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.fact{padding:12px 14px;background:#f1f7f1;border-radius:9px}.fact b{display:block;color:#5e7769;font-size:13px;font-weight:500}.fact strong{font-size:19px;color:#174e3d}.formula{font-family:Consolas,monospace;background:#f5f7f5;padding:12px 14px;border-radius:7px;overflow:auto}.note{border-left:4px solid #e5ad5d;background:#fff8e9;padding:12px 16px;color:#66533b}.ok{border-left:4px solid #5eae83;background:#eef8f0;padding:12px 16px}.links a{display:inline-block;margin:5px 10px 5px 0;padding:8px 14px;border:1px solid #a9c8b6;border-radius:8px;color:#176048;text-decoration:none;background:#f8fcf8}@media(max-width:760px){.grid,.facts{grid-template-columns:1fr}.wrap{padding:18px 12px}section{padding:18px}}
+</style>
+</head>
+<body>
+<header><h1>C｜尺寸计算与结构对应 v13</h1><p>这一页只讲 C 方案的尺寸来源、展开占地和结构对应关系。数字是同一模型的概念计算值，不是已经完成纸板回弹与生产公差修正的刀线尺寸。</p></header>
+<div class="wrap">
+  <section><img class="hero" src="C/结构草图_C-v13.png" alt="C v13 结构计算草图"><div class="facts"><div class="fact"><b>总容量</b><strong>72 色 + 1 支</strong></div><div class="fact"><b>分盘</b><strong>3 盘 × 24 支</strong></div><div class="fact"><b>排布</b><strong>2 排 × 12 支</strong></div><div class="fact"><b>笔轴</b><strong>全程水平</strong></div></div></section>
+  <section><h2>1. 单排内净宽怎么算</h2><p class="formula">12 × 15 + 11 × 2 + 4 = 206 mm</p><p>12 支使用最大直径 Ø15 mm；11 个相邻间隔按 2 mm 计；整排两端合计余量为 4 mm。加上两侧各 2 mm 纸壁后：</p><p class="formula">206 + 2 × 2 = 210 mm（纸托外宽）</p><p class="formula">150 + 2 × 1 + 2 × 2 = 156 mm（单排深度）</p><p class="formula">2 × 156 = 312 mm（两排纸盘深度）</p></section>
+  <section><h2>2. 三盘叠放与闭合外包络</h2><table><thead><tr><th>项目</th><th>概念计算/模型读数</th><th>用途</th></tr></thead><tbody><tr><td>单盘外宽</td><td>210 mm</td><td>确定盘体横向占位</td></tr><tr><td>单盘深度</td><td>312 mm</td><td>确定抽拉方向和外套深度</td></tr><tr><td>单盘结构高度</td><td>底板 2 mm + 侧壁约 18 mm ≈ 20 mm</td><td>确定单盘容纳高度</td></tr><tr><td>叠放节距</td><td>23 mm × 2 个层间</td><td>确定三盘相互避让</td></tr><tr><td>闭合外包络</td><td><b>246 × 331.5 × 84 mm</b></td><td>来自同一 C-master.blend 的闭合状态</td></tr></tbody></table><p class="note">闭合尺寸包含外套、底盒、叠盘空间和闭锁前沿；不能直接当作生产刀线尺寸。</p></section>
+  <section><h2>3. 展开占地与动作先后</h2><p>先抽出中间底盒，再把中间底盒两侧壁向外下翻，之后左右纸盘移到两侧；左右小纸盘两侧保持立起，从上方取笔。上方挡板保持固定；右侧多余独立板不设置；下方带印刷挡板与底盒连体。</p><p class="formula">左右纸盘移出后，最大横向展开宽约 710 mm</p><p class="formula">从外套后侧到最前方纸盘边缘，展开深约 681.5 mm</p><p class="formula">静态展开模型包络约 710 × 681.5 × 84 mm</p><div class="grid"><img src="C/comparison-open-v13.png" alt="v13 原始展开图"><img src="C/mechanism-clearance-v13.png" alt="v13 侧壁下翻、上方挡板固定、下方挡板连体的取笔通道"></div></section>
+  <section><h2>4. 结构图重点对应</h2><p class="note"><b>本部分重点图：结构计算草图 v13。</b> 01 至 05 与上面的公式使用同一套 C v13 模型数据。</p><img class="hero" src="C/结构草图_C-v13.png" alt="Part 4 重点结构计算草图 v13"><h3>01 展开与取笔状态</h3><p>中间纸盘留在底盒内，左右纸盘移到两侧；中间底盒两侧壁下翻后给纸盘抽出让路，小纸盘两侧保持立起。上方挡板不下翻，右侧没有多余独立板，下方带印刷挡板与底盒连体。</p><h3>02 闭合与携带尺寸</h3><p>闭合外包络为 246 × 331.5 × 84 mm，包含外套、底盒、叠盘空间和闭锁前沿。</p><h3>03 单盘俯视</h3><p>每盘 2 排 × 12 支。单排内净宽 206 mm，纸托外宽 210 mm，两排深度 312 mm。</p><h3>04 整块侧壁下翻</h3><p>收纳时侧壁竖直，取笔时中间底盒两侧壁向外下翻 90°，让左右纸盘脱离盒腔；左右小纸盘两侧保持立起，从上方取笔。下方固定挡板不参与下翻，只负责防滚。</p><h3>05 参数账本</h3><p>150 mm 是含帽整笔长，Ø15 mm 是最大直径，笔轴全程水平；仍需白样回算纸板厚度、铰链回弹和保持力。</p></section>
+  <section><h2>5. 仍需白样验证</h2><ul><li>裱合后的真实板厚、折边回弹和侧壁纸铰链寿命。</li><li>侧壁放平时与桌面、相邻纸盘和笔帽的干涉。</li><li>三盘叠放节距、外套抽拉间隙与插舌止退。</li><li>下方连体挡板的连接强度、倒置保持力和反复抽拉疲劳。</li></ul></section>
+  <section class="links"><a href="C方案详细说明.html">返回 C 方案详细说明</a><a href="C/结构草图_C-v13.png">下载结构计算草图</a><a href="C/C取笔动作-v13.gif">查看 v13 取笔动图</a><a href="C/动作顺序_C-v13.png">查看动作顺序图</a><a href="C/model-record.json">模型记录</a></section>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "repository": "https://github.com/sbarrak/packbox",
+  "commit": "3b1b33e34500e1fe615dbfe2d486e818696c0c78",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 sbarrak",
+  "retrieved": "2026-10-30",
+  "upstreamFilesSha256": {
+    "src/geometry/boxBuilders.ts": "dbf560441dee144c70eea13036c0646a532b32b3c063dcdc7ab883cf494d5a2e",
+    "src/geometry/dimensions.ts": "2d75195a1ef5bd12f1ca0bf8d8381930cf6f14e3ecffd76855011b0dcbcf362d",
+    "src/geometry/layout.ts": "84dec5b639628469b7c52e417fcafd1a25d33343b02c5fbd7dc498b1716563b0",
+    "src/geometry/shapes.ts": "310fa8e77f15a0c8a8dfdff8a172b0c5af5abd0c3ec6fc557dbf5af040462536",
+    "src/geometry/svgExport.ts": "c322f38713ab3f10dffc8392e064ad93f5b5e3a04c13384dee1a7fa87d5eb4ca",
+    "src/geometry/types.ts": "bbe9e0b859dcd5cfd1f510bd12c4535bc0144d1a13190103574e91e64a1757b2",
+    "src/project/projectFile.ts": "34c9a468cebb87d544caa9319360e4ebc57e8d34ecbb18860f8d46e33be0fc3f",
+    "src/artwork/types.ts": "b673473bc58409b88ec1d8cd2728a4e230b467c1f078a19f30597a178ef74bff"
+  },
+  "upstreamModifications": "none; separate adapter.ts and cli.ts added",
+  "bundleTool": "esbuild 0.25.12; bundle for Node 24, CommonJS",
+  "runtime": {
+    "name": "Node.js",
+    "version": "24.15.0",
+    "platform": "win-x64",
+    "url": "https://nodejs.org/dist/v24.15.0/win-x64/node.exe",
+    "sha256": "3331e1ffe19874215472217c5e94f5a0c6d8e18c4ac7111d3937aa0ad5e9b4a5",
+    "verifiedAgainst": "https://nodejs.org/dist/v24.15.0/SHASUMS256.txt",
+    "licenseFile": "runtime/LICENSE",
+    "licenseUrl": "https://raw.githubusercontent.com/nodejs/node/v24.15.0/LICENSE"
+  },
+  "limitations": [
+    "Zero board thickness; no automatic inner/outer size compensation",
+    "Auto-lock bottom interlocking slots are not fully modelled",
+    "Base and lid require separate templates",
+    "No arbitrary AI assembly conversion or manufacturing certification"
+  ],
+  "adaptedTest": {
+    "path": "tests/upstream-smoke-test.ts",
+    "sourcePath": "scripts/smoke-test.ts",
+    "originalSha256": "675c4d142167941354c4c0a315897b938c16e53296801d29f461dc051e6218df",
+    "change": "Only DXF import/assertions removed; SVG and geometry assertions retained.",
+    "sha256": "2c6e935996b46251c3ec392934245457f30d74422f4b087906937cfcdce8103e"
+  },
+  "bundleSha256": "b44cbd4cfffa26f3d195397706eafb8295e1d310533fc4ecde4875421df35152"
+}
